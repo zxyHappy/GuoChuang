@@ -1,1 +1,6 @@
-
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.140.247.80:3306/guochuang?characterEncoding=utf8&amp;serverTimezone=GMT&amp;useSSL=false&amp;useServerPrepStmts=true&amp;rewriteBatchedStatements=true
+    username: root
+    password: root

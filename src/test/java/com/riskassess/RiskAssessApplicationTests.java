@@ -1,4 +1,4 @@
-package com.example.riskassess;
+package com.riskassess;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

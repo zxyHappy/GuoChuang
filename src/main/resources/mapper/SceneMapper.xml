@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.riskassess.mapper.SceneMapper">
+    
+    <insert id="insert" parameterType="com.riskassess.entity.Scene">
+        insert into scene (name,step,slope,light,slip,identifier) values (#{name},#{step},#{slope},#{light},#{slip},#{identifier})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from scene whereid = #{id}
+    </delete>
+
+</mapper>
