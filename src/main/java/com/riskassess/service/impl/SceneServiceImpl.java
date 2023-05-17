@@ -14,8 +14,8 @@ public class SceneServiceImpl implements SceneService {
 
     @Override
     public int insertScene(Scene scene) {
-        boolean i = sceneMapper.insert(scene);
-        if(i){
+        int i = sceneMapper.insert(scene);
+        if(i == 1){
             return 0;
         }else {
             return 1;
