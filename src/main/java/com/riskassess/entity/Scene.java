@@ -13,5 +13,6 @@ public class Scene {
     private int light;
     private double slip;
     private int identifier;
+    private double square;
 
 }

@@ -55,5 +55,34 @@ public class StampedeIncident {
         return map;
     }
 
+    @RequestMapping(value = "/update")
+    public HashMap<String,Object> updateScene(@RequestBody Scene scene){
+        int i = sceneService.updateScene(scene);
+        HashMap<String,Object> map = new HashMap<>();
+        switch (i){
+            case 0:
+                map.put("msg","场景更新成功");
+                map.put("status",0);
+                break;
+            case 1:
+                map.put("msg","场景更新失败");
+                map.put("status",1);
+                break;
+            default:
+                return null;
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/getValue")
+    public HashMap<String,Object> getValue(@RequestBody int id){
+        int num=100;
+        int i = sceneService.selectScene(id,num);
+        HashMap<String,Object> map = new HashMap<>();
+        map.put("危险性级别", i);
+        map.put("status",0);
+        return map;
+    }
+
 
 }

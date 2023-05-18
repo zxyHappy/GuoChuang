@@ -20,4 +20,18 @@ public interface SceneService {
      */
     int deleteScene(int id);
 
+    /**
+     *
+     * @param scene 修改场景
+     * @return 0代表成功，1代表失败
+     */
+    int updateScene(Scene scene);
+
+    /**
+     *
+     * @param scene 计算场景风险值
+     * @return
+     */
+    int selectScene(int id, int num);
+
 }

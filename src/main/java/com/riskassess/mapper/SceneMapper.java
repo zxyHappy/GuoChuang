@@ -12,5 +12,9 @@ public interface SceneMapper {
 
     int delete(int id);
 
+    int update(Scene scene);
+
+    Scene select(int id);
+
 
 }

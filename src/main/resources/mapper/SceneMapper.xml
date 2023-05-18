@@ -5,11 +5,19 @@
 <mapper namespace="com.riskassess.mapper.SceneMapper">
     
     <insert id="insert" parameterType="com.riskassess.entity.Scene">
-        insert into scene (name,step,slope,light,slip,identifier) values (#{name},#{step},#{slope},#{light},#{slip},#{identifier})
+        insert into scene (name,step,slope,light,slip,identifier,square) values (#{name},#{step},#{slope},#{light},#{slip},#{identifier},#{square})
     </insert>
 
     <delete id="delete" parameterType="int">
         delete from scene where id = #{id}
     </delete>
+
+    <update id="update" parameterType="com.riskassess.entity.Scene">
+        update scene set name=#{name},step=#{step},slope=#{slope},light=#{light},slip=#{slip},identifier=#{identifier},square=#{square} where id = #{id}
+    </update>
+
+    <select id="select" parameterType="int" resultType="com.riskassess.entity.Scene">
+        select * from scene where id = #{id}
+    </select>
 
 </mapper>
