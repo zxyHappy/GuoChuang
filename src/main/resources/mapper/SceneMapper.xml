@@ -9,7 +9,7 @@
     </insert>
 
     <delete id="delete" parameterType="int">
-        delete from scene whereid = #{id}
+        delete from scene where id = #{id}
     </delete>
 
 </mapper>

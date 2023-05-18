@@ -21,4 +21,14 @@ public class SceneServiceImpl implements SceneService {
             return 1;
         }
     }
+
+    @Override
+    public int deleteScene(int id) {
+        int i = sceneMapper.delete(id);
+        if(i == 1){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
 }

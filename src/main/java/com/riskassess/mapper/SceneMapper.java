@@ -8,9 +8,9 @@ import org.apache.ibatis.annotations.Param;
 public interface SceneMapper {
 
 
-    int insert(@Param("scene") Scene scene);
+    int insert(Scene scene);
 
-    boolean delete(int id);
+    int delete(int id);
 
 
 }

@@ -13,4 +13,11 @@ public interface SceneService {
      */
     int insertScene(Scene scene);
 
+    /**
+     *
+     * @param id
+     * @return
+     */
+    int deleteScene(int id);
+
 }

@@ -1,6 +1,16 @@
+server:
+  port: 8080
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://43.140.247.80:3306/guochuang?characterEncoding=utf8&serverTimezone=GMT&useSSL=false&useServerPrepStmts=true&rewriteBatchedStatements=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://43.140.247.80:3306/guochuang?characterEncoding=utf8&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true&rewriteBatchedStatements=true
     username: root
-    password: root
+    password:
+
+mybatis:
+  # 配置MyBatis的xml配置文件路径
+  mapper-locations: classpath:mapper/*.xml
+  # 开启驼峰uName自动映射到u_name
+  map-underscore-to-camel-case: true
