@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://43.140.247.80:3306/guochuang?characterEncoding=utf8&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true&rewriteBatchedStatements=true
     username: root
-    password:
+    password: Zxy779299abc.
 
 mybatis:
   # 配置MyBatis的xml配置文件路径

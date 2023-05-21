@@ -14,6 +14,6 @@ public class CrowdData {
     // 是否有对冲人流
     private int a2;
     //人员流速差异
-    private int a3;
+    private double a3;
 
 }

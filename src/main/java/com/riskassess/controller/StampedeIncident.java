@@ -80,6 +80,21 @@ public class StampedeIncident {
         int i = sceneService.selectScene(crowdData);
         HashMap<String,Object> map = new HashMap<>();
         map.put("危险性级别", i);
+        switch (i){
+            case 1:
+                map.put("msg","异常严重，须立即疏散人群");
+                break;
+            case 2:
+                map.put("msg","非常严重，需加强警戒，严格控制");
+                break;
+            case 3:
+                map.put("msg","比较严重，需严密监控");
+                break;
+            case 4:
+                map.put("msg","不太严重，正常预防");
+                break;
+            default:break;
+        }
         map.put("status",0);
         return map;
     }
