@@ -28,10 +28,12 @@ public interface SceneService {
     int updateScene(Scene scene);
 
     /**
-     *
-     * @param scene 计算场景风险值
+     * 计算场景风险值
+     * @param id 场景id
+     * @param num 人数
      * @return
      */
     int selectScene(int id, int num);
+
 
 }
