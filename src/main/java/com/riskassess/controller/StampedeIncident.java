@@ -1,6 +1,7 @@
 package com.riskassess.controller;
 
 
+import com.riskassess.entity.CrowdData;
 import com.riskassess.entity.Scene;
 import com.riskassess.service.SceneService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,9 +76,8 @@ public class StampedeIncident {
     }
 
     @RequestMapping(value = "/getValue")
-    public HashMap<String,Object> getValue(@RequestBody int id){
-        int num=100;
-        int i = sceneService.selectScene(id,num);
+    public HashMap<String,Object> getValue(@RequestBody CrowdData crowdData){
+        int i = sceneService.selectScene(crowdData);
         HashMap<String,Object> map = new HashMap<>();
         map.put("危险性级别", i);
         map.put("status",0);

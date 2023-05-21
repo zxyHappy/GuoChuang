@@ -1,5 +1,6 @@
 package com.riskassess.service.impl;
 
+import com.riskassess.entity.CrowdData;
 import com.riskassess.entity.Scene;
 import com.riskassess.mapper.SceneMapper;
 import com.riskassess.service.SceneService;
@@ -45,14 +46,14 @@ public class SceneServiceImpl implements SceneService {
     }
 
     @Override
-    public int selectScene(int id, int num) {
-        Scene scene = new Scene();
-        scene = sceneMapper.select(id);
-        return riskAccumulation(num,scene);
+    public int selectScene(CrowdData data) {
+        Scene scene = sceneMapper.select(data.getId());
+        return riskAccumulation(data,scene);
     }
 
-    public int riskAccumulation(int num,Scene scene){
-        double a1,a2=0,a3=0;
+    public int riskAccumulation(CrowdData data,Scene scene){
+        int num = data.getNum();
+        double a1,a2=data.getA2(),a3=data.getA3();
         double b1,b2;
         double c1,c2,c3;
         double a,b,c,d=0;

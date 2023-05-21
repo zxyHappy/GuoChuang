@@ -1,5 +1,6 @@
 package com.riskassess.service;
 
+import com.riskassess.entity.CrowdData;
 import com.riskassess.entity.Scene;
 import org.springframework.stereotype.Service;
 
@@ -28,12 +29,11 @@ public interface SceneService {
     int updateScene(Scene scene);
 
     /**
-     * 计算场景风险值
-     * @param id 场景id
-     * @param num 人数
+     *  计算指标
+     * @param data 此刻人群数据
      * @return
      */
-    int selectScene(int id, int num);
+    int selectScene(CrowdData data);
 
 
 }
